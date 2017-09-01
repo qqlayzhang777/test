@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>足球</title>
+	<style type="text/css">
+		*,div,span{margin: 0;padding: 0;}
+		.comWidth{width: 500px;margin: 0 auto;background-color: #fff;}
+		.dow{background-color:#db2442;
+			margin-top: 30px;
+			height: 50px;
+			width: 460px;
+			line-height: 50px;
+			color:#fff;
+			font-family: "黑体";
+			font-size: 20px;
+			padding:0 20px;
+			text-align: center;
+			position: relative;
+		 }
+		 .dow1{position: absolute;
+		 	left: 20px;
+		 }
+		 .dow3{position: absolute;
+		 right: 20px;}
+		 /*.dow2{position: relative;
+		 left: 14px;}*/
+
+		 .footer{background-color:#db2442;
+			height: 50px;
+			width: 500px;
+			line-height: 50px;
+			color:#fff;
+			font-family: "黑体";
+			font-size: 20px;
+			text-align: center;
+		 }
+		 .thanks{
+		 	height: 110px;
+		 	background: url(file:///C:/Users/Administrator/Desktop/2804.png) center center/100% no-repeat;
+		 	border-bottom: 1px solid #ccc;
+		 }
+		 .pro{
+		 	height: 70px;
+		 }
+		.pro1{margin-top: 15px;
+			border-right:1px solid #ccc;
+			text-align: center;
+			width: 249px;
+			height: 40px;
+			float: left;
+		}
+		.pro1 span{
+			display: block;
+			line-height: 22px;
+			font-family: "微软雅黑";	
+		}
+		.team1,.team2{color:#707070;}
+		.Hteam2 span:first-child,.pro1 span:first-child{
+			color:#868686;
+		}
+		.pro2{border-right: none;}
+		.h-15{height: 15px;background: #f5f5f5;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+		.team{height: 40px;background: #eee;font-family: "微软雅黑";overflow: hidden;}
+		.Hteam,.Vteam,.teamB{width: 135px;height: 40px;line-height: 40px;text-align: center;float: left;}
+		.Hteam{width: 230px;}
+		.team1{height: 140px;font-family: "微软雅黑";width: 480px;border-bottom: 1px solid #ccc;margin-left: 10px;background:#fff;}
+		.team1 span{display: block;}
+		.Hteam1,.Vteam1,.teamB1{width: 134px;text-align: center;float: left;line-height: 30px;}
+		.Hteam1{width: 219px;}
+		.teamB1{width: 125px;}
+		.Hteam1{height: 100px;margin-top: 20px;}
+		.Hteam1,.Vteam1 span{border-right:1px solid #CCC;}
+		.Hteam1 span:first-child{margin-top: 20px;color:#868686;}
+		.Vteam1 span,.teamB1 span{margin: 12.5px 0;}
+		.team2{height: 70px;font-family: "微软雅黑";text-align: center;border-bottom: 1px solid #ccc;}
+		.team2 span{display: block;}
+		.team2 div{float: left;line-height: 30px;}
+		.Hteam2{width: 230px;margin-top: 5px;}
+		.Vteam2{width: 133px;border-right:1px solid #CCC;border-left:1px solid #CCC;margin-top:20px;}
+		.teamB2{width: 135px;margin-top: 20px;}
+		.pass,.pass1{padding-left: 15px;}
+		.pass span,.pass1 span{display: block;height: 45px;line-height: 45px;font-family: "微软雅黑";}
+		.pass span:first-child,.pass1 span:first-child{border-bottom: 1px solid #ccc;}
+		.pass1{color: #999;border-bottom: 1px solid #ccc;}
+		.h-100{height: 92px;background-color: #f5f5f5;}
+		:root{background-color: #e2e2e2;}
+
+		.flexcon{
+			/*width: 1000px;
+			height: 500px;*/
+			border:1px solid #ccc;
+			margin: 30px auto;
+			list-style: none;
+			background-color: #fff;
+		}
+		.flexcon li{
+			/*width: 100px;
+			height: 100px;*/
+			background-color: red;
+			margin: 10px;
+			line-height: 100px;
+			text-align: center;
+			color:#fff;
+			font-weight: bold;
+		}
+		.flexcon{
+			display:-webkit-flex;
+			-webkit-flex-direction:row-reverse;
+		}
+	</style>
+</head>
+<body>
+	<div class="dow comWidth">
+		<span class="dow1">&lt;</span>
+		<span class="dow2">投注详情</span>
+		<span class="dow3">分享</span>
+	</div>
+	<div class="comWidth">
+		<div class="thanks"></div>
+		<div>
+			<div class="pro">
+				<div class="pro1">
+					<span>方案金额</span>
+					<span>40.00</span>
+				</div>
+				<div class="pro1 pro2">
+					<span>订单状态</span>
+					<span>未中奖</span>
+				</div>
+			</div>
+		</div>
+		<div class="h-15"></div>
+		<div class="team">
+			<span class="Hteam">主队 VS 客队</span>
+			<span class="Vteam">赛果</span>
+			<span class="teamB">投注</span>
+		</div>
+		<div class="team1">
+			<div class="Hteam1">
+				<span>周五002</span>
+				<span>盐湖城 0:1 奥兰多</span>
+			</div>
+			<div class="Vteam1">
+				<span>负</span>
+				<span>(-1)客胜</span>
+				<span>平平</span>
+			</div>
+			<div class="teamB1">
+				<span>主胜(1.93)</span>
+				<span>让球平(1.93)</span>
+				<span>平胜(1.93)</span>
+			</div>
+		</div>
+		<div class="team2">
+			<div class="Hteam2">
+				<span>周五002</span>
+				<span>盐湖城 0:1 奥兰多</span>
+			</div>
+			<div class="Vteam2">
+				<span>负</span>
+			</div>
+			<div class="teamB2">
+				<span>主胜(1.93)</span>
+			</div>
+		</div>
+		
+		<div class="pass">
+			<span>过关方式 : 2场，2串1</span>
+			<span>投注倍数 : 4注1倍</span>
+		</div>
+		<div class="h-15"></div>
+		<div class="pass1">
+			<span>投注时间 : 2017-06-09 21:15</span>
+			<span>方案编号 : 20170609KJHT2115</span>
+		</div>
+		<div class="h-100"></div>
+	</div>
+	<div class="footer comWidth">继续投注</div>
+	<ul class="flexcon">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</body>
+</html>
