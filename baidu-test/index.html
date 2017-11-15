@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>baidu外卖</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="app">
+    <router-view></router-view>
+  </div>
+
+  <template id="bai_shop" >
+    <div>
+      <div class="navHeader">
+        <div class="header">
+          <div class="header_top">
+            <span class="back">→</span>
+            <span class="collect">☆</span>
+            <h1>{{headerMsg.title}}</h1>
+          </div>
+          <div class="header_B">
+            <div><img v-if="headerMsg.logo" :src="'image/' + headerMsg.logo" alt="logo"></div>
+            <span>{{headerMsg.info}}</span>
+          </div>
+        </div>
+        <div class="storeClass">
+          <div @click="checked=index" v-for="(item,index) in headerMsg.menu">
+            <router-link :class="[{check:checked==index}]" :to="'/store/'+ headerMsg.store + '/' + item.url">
+              <span>{{item.text}}</span>
+            </router-link>
+          </div>
+        </div>
+      </div>
+
+      <router-view></router-view>
+    </div>
+  </template>
+
+  <template id="bai_product">
+    <div class="productCla">
+      <div class="goodsList">
+        <li v-for="(item,index) in productMsg" @click="checked=index">
+          <router-link :to="'/store/'+$route.params.storeName+'/product/foods/'+item.id" :class="[{check:checked==index}]">{{item.text}}</router-link>
+        </li>
+      </div>
+      <router-view></router-view>
+
+      <div class="shopCart">
+        <div class="svg">svg</div> 
+        <span>共 <i class="totalPay">¥ {{$store.state.count}}</i> 元</span>
+        <router-link to="">选好了</router-link>
+      </div>
+    </div>
+  </template>
+  
+  <template id="dks_appraise">
+    <div>
+      评价页面
+    </div>
+  </template>
+
+  <template id="dks_seller">
+    <div>
+      商家页面
+    </div>
+  </template>
+
+  <template id="bai_foods">
+    <div class="navFoods">
+      <ul class="foodsList">
+        <li v-for="(item,index) in foodsList">
+          <img :src="'image/item/'+item.img" :alt="item.title">
+          <h3>{{item.title}}</h3>
+          <span>已售{{item.sales}}份 推荐:{{item.num}}份</span>
+          <span>¥{{item.price}}</span>
+          <div class="goodNum">
+            <span v-show="item.num > 0" @click="changfoodNum(item,-1);$store.commit('reduce',item.price)">-</span>
+            <!-- <input type="text" value="0" disabled> -->
+            <span v-show="item.num > 0">{{item.num}}</span>
+            <span @click="changfoodNum(item,1);$store.commit('add',item.price)">+</span>
+          </div>
+        </li>
+        <!-- <li>
+          <img src="" alt="">
+          <h3>{菠萝鸡腿堡套餐}</h3>
+          <span>已售{20}份 推荐:{11}份</span>
+          <span>¥{38}</span>
+        </li> -->
+      </ul>
+    </div>
+  </template>
+
+  <script src="../vue.js"></script>
+  <script src="../vue-router.js"></script>
+  <script src="../axios.min.js"></script>
+  <script src="../vuex.js"></script>
+  <script src="js/index.js"></script>
+  <script src="router.js"></script>
+  
+</body>
+</html>
