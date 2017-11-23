@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test3</title>
+    <style type="text/css">
+    /*body{height: 4000px;}*/
+        /**{font-size: 14px;}*/
+        *,a,span,div,p,em,strong,h3,h4,img,li,ul,input,button,i{margin: 0;padding: 0;}
+        a{text-decoration: none;color: #000;}
+        img,input{border:none;}
+        li{list-style: none;}
+        i{font-style: normal;}
+        .grey{background-color: #f0f0f0;}
+        .comWidth{width: 1000px;margin: 0 auto;}
+        /*顶部*/
+        .topA{height: 100px;border:1px solid red;}
+        /*用户位置*/
+        .userP{font-size: 0;font-family: "微软雅黑";margin-top: 25px;margin-bottom: 15px;}
+        .userP a,.userP span,.userP strong{font-size: 14px;color: #555;}
+        .userP a:hover{text-decoration:underline;}
+        /*产品展示*/
+        .gShow{overflow: hidden;background-color: #fff;}
+        .gShow1{border:1px solid #ccc;overflow: hidden;height: 100%;}
+        .gShow .left{width: 309px;float: left;}
+        .imgB{width: 266px;height: 340px;margin: 0 auto;}
+        .gShow1 .imgS{margin: 0 auto;width: 266px;padding-left: 1px;overflow: hidden;}
+        .gShow1 .imgS a{float: left;border:1px solid #ccc;margin-left: -1px;}
+        /*.gShow1 .imgS img{border:1px solid #ccc;float: left;margin-left: -1px;}*/
+        .gShow1 .imgS .act{border:1px solid #317ee7;position: relative;}
+
+        .gShow .right{float: left;border-left:1px solid #ccc;margin-left: -1px;width: 658px;padding-left: 25px;padding-right: 5px;padding-top: 27px;}
+        
+        .gtl{font-size: 16px;font-weight: bold;font-family: "微软雅黑";line-height: 22px;display: inline-block;margin-bottom: 14px;}
+        .xl{overflow: hidden;line-height: 25px;height: 25px;margin-bottom: 16px;}
+        .rlt{width: 59px;display: inline-block;font-size: 14px;color: #666;float: left;}
+        .xl .money,.xl .jmon{font-size: 22px;font-family: "微软雅黑";color: red;}
+        .xl .money{font-size: 14px;margin-right: 2px;}
+        .xl .mhg{display: inline-block;float: left;margin-top: 4px;margin-right: 5px;}
+        .hgt{font-size: 14px;color: #666;}
+        .grm{width: 652px;background-color: #F2F2F2;margin-left: -14px;padding:20px 0 8px 14px;overflow: hidden;}
+        .xl1{line-height: 25px;margin-bottom: 16px;overflow: hidden;clear: both;}
+        .rlt1{width: 69px;display: inline-block;font-size: 14px;color: #666;float: left;}
+        .grm .addr{float: left;width: 125px;border:1px solid #ccc;height: 22px;line-height: 22px;padding-right: 20px;padding-left: 5px;position: relative;margin-right: 10px;color: #666;background-color: #fff;}
+        .jo{background: url(file:///C:/Users/Administrator/Desktop/jpg/nav.jpg) left center no-repeat;display: inline-block;float: left;width: 20px;height: 22px;position: absolute;right: 0;top: 0;}
+        .addr .addr1{display: inline-block;height: 22px;overflow: hidden;}
+        .addr span,.addr li{font-size: 12px;}
+        .grm .addrj{border:1px solid #ccc;position: absolute;left: -1px;top: 8px;width: 145px;float: left;padding-left: 5px;*margin-left: 0px;*margin-top: 14px;display: none;}
+        .addr2{*float: left;font-size: 14px;}
+        .addr2 li{padding: 0 27px;background-color: #fff;height: 32px;float: left;border:1px solid #ccc;line-height: 32px;margin-right: 10px;text-align: center;}
+        .addr2 .act{border:1px solid #317EE7;}
+        .rlt2{line-height: 32px;float: left;}
+        .addr3 span{color: #666;height: 24px;line-height:24px;margin-bottom: 8px;padding: 0 6px;float: left;background-color: #fff;border:1px solid #CCC;margin-right: 10px;overflow: hidden;}
+        .rlt3{line-height: 60px;float: left;}
+        .xl2{margin-top: -8px;overflow: hidden;*margin-top: 8px;}
+        .xg{float: left;}
+        .addr4{float: left;width: 82px;height: 32px;line-height: 32px\9;border:1px solid #CCC;margin-right: 10px;}
+        .addr4 span{width: 15px;height: 32px;line-height: 32px;text-align: center;display: inline-block;float: left;}
+        .addr4 input{float: left;width: 44px;height: 32px;line-height: 32px\9;display: inline-block;background: url(file:///C:/Users/Administrator/Desktop/jpg/4.详细页%20-%20商品评价_r1_c3.jpg) left center no-repeat;text-align: center;padding: 0 3px;}
+        .addr4 .jian{border-right: 1px solid #CCC;background: url(file:///C:/Users/Administrator/Desktop/jpg/4.详细页%20-%20商品评价_r1_c1.jpg) left center no-repeat;}
+        .addr4 .jia{border-left:1px solid #CCC;background: url(file:///C:/Users/Administrator/Desktop/jpg/4.详细页%20-%20商品评价_r1_c1.jpg) left center no-repeat;}
+        .xg{line-height: 32px;color:#666;font-size: 14px;}
+        .xg span{color: red;font-weight: bold;}
+        
+        .yxz{padding:23px 5px 11px;overflow: hidden;}
+        .yxz p{color: #656565;font-weight: bold;margin-bottom: 13px;clear: both;}
+        .yxz span{color:#0479C9;font-weight: bold; }
+        .jgc{width: 184px;height: 48px;margin-left: 55px;padding: 21px 40px;border-right: 1px solid #CCC;float: left;margin-bottom: 20px;*margin-left: 0;line-height: 48px;}
+        .jgc span{width: 184px;height: 48px;display: inline-block;background-color: #FB8800;color: #fff;font-family: "微软雅黑";font-size: 20px;font-weight: normal;}
+        .ico{background: url(file:///C:/Users/Administrator/Desktop/jpg/4.详细页%20-%20商品评价_r2_c2.jpg) left center no-repeat;width: 23px;height: 20px;display: inline-block;margin: 0px 14px -1px 30px;*margin-top:10px;}
+        .jgc1{margin-left: 0;padding-left: 39px;border:none;}
+        .yxz .ptp{color: #999;}
+
+        /*左侧小列表*/
+        .xlb{width: 188px;border:1px solid #CCC;margin-top: 14px;}
+        .tjw{height: 39px;border-bottom: 1px solid #ccc;line-height: 39px;background-color: #F3F3F3;border-top: 3px solid #1D86CF;padding-left: 15px;}
+        .gbj{background-color: #fff;padding: 0 19px 18px;}
+        .gbj a{font-size: 12px;text-align: center;line-height: 18px;display: inline-block;color: #666;font-family: "新宋体";}
+        .xlt{width: 150px;text-align: center;padding-top: 18px;padding-bottom: 13px;}
+        .jg1{color: red;line-height: 20px;font-family: "微软雅黑";font-size: 12px;font-weight: bold;}
+        .tjw1{border-top: none;}
+        .gxqxl{float: left;}
+/*右侧*/
+        .ift{width: 785px;border:1px solid #CCC;margin-top: 14px;float: left;margin-left: 23px;}
+            .gind{overflow: hidden;}
+            .gind li{width: 50%;float: left;height: 40px;border-bottom: 1px solid #CCC;*margin-left: -1px;line-height: 40px;text-align: center;}
+            .gindl{background-color:#EFEFEF;}
+            .gindr{background-color:#0479CA;border-left: 1px solid #CCC;margin-left: -1px;}
+            .gindl span{background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r2_c1.jpg) left center no-repeat;padding-left: 36px;height: 40px;display: inline-block;font-weight: bold;}
+            .gindr span{background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r1_c3.jpg) left center no-repeat;padding-left: 36px;height: 40px;display: inline-block;font-weight: bold;color: #FFF;}
+            .geva{background-color: #fff;height: 147px;padding-left:10px;padding-top:12px;overflow: hidden;}
+            .geva h4{color: #656565;margin-bottom: 35px;}
+            .sco{float: left;margin-top: -15px;margin-right: 10px;}
+            .scop{float: left;}
+            .sco span{font-size: 18px;color: #65657D;font-family:"微软雅黑";}
+            .sco .scon{color: #FF8F00;font-family:"微软雅黑";font-size:50px;}
+            .scop1{width: 422px;height: 17px;line-height: 17px;background-color: #BDBDBD;color: #FFF;padding-left: 30px;position: relative;line-height: 17px;}
+            .scop1 span{width: 70px;display: inline-block;float: left;font-size: 12px;}
+            .scop1 .gedw{position: absolute;top: -21px;right: 40px;color: #fff;width: 25px;height: 18px;background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r2_c2.jpg) center center no-repeat;line-height: 13px;text-align: center;}
+            .scop p{font-size: 12px;color: #65657D;line-height: 32px;}
+            .scop .fcb{margin-right: 15px;}
+
+			.pjxx{height: 32px;line-height: 32px;background-color: #F2F2F2;padding-left: 20px;padding-right: 10px;}
+			.pjxx1{float: left;font-size: 12px;}
+			.pjxx2{float: right;margin-top: 5px;*margin-top: 6px;}
+			.pjxx2 span{float: left;font-size: 12px;width: 61px;height: 20px;border:1px solid #CCC;line-height: 20px;font-family: "宋体";padding:0 6px;background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r3_c1.png) 59px center no-repeat;border-bottom: none;}
+			.pjxx1 span{width: 106px;display: inline-block;font-family: "新宋体";}
+			.pjxx1 .phA{width: 36px;height: 29px;border-bottom: 3px solid #317EE7;color: #317DE6;font-weight: bold;display: inline-block;text-align: center;margin-right: 46px;*overflow: hidden;}
+			.pjxx2 .pjxx22{border-right: none;position: relative;}
+			.pjxx22 i{background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r1_c3.png) center center no-repeat;width: 26px;height: 14px;display: inline-block;position: absolute;right: 6px;top: -13px;}
+
+			.pjsco{background-color: #fff;padding:18px 24px 0 40px;overflow: hidden;}
+			.jshu{margin-bottom: 35px;overflow: hidden;width: 721px;}
+			.jshl{width: 60px;text-align: center;float: left;margin-right: 71px;}
+			.jshl img{width: 60px;height: 60px;display: inline-block;}
+			.jshl p{font-size: 12px;color: #77778B;font-family: "新宋体";line-height: 19px;}
+			.jshl .hybh{font-family: "微软雅黑";}
+			.jshr{float: left;}
+			.jshr li{background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商3_c4.jpg) center center no-repeat;width: 15px;height: 14px;float: left;}
+			.pjwx{margin-bottom: 21px;float: left;}
+
+			.wfmy{float: left;font-size: 12px;font-weight: bold;margin-left: 13px;}
+			.jshr p{margin-bottom: 16px;font-size: 12px;color: #777;clear: both;}
+			.jshr .tbc{color: #075B9B;float: left;}
+			.pjdat{float: right;font-size: 12px;color: #ABABAB;}
+			.pjym{margin-top: 47px;font-size: 12px;margin-right: -15px;margin-left: 225px;padding-bottom: 29px;}
+			.pjym a{padding: 0 9px;height: 23px;line-height: 23px;display: inline-block;border:1px solid #D9D9D9;margin-right: 5px;}
+			.pjsry{width: 24px;height: 19px;border:1px solid #D9D9D9;margin: 0 7px;text-align: center;line-height: 19px\9;padding: 0 2px;}
+			.pjlue{font-style: 12px;font-family: "微软雅黑";color: #657DB7;margin-right: 12px;margin-left: 7px;}
+			.pjnp{color: #075B9B;margin-right: 8px;}
+			.pjsu{margin-left: 12px;width: 36px;height: 20px;line-height: 20px;background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品_c2.jpg) center center no-repeat;}
+			.pjzy{color: #075B9B;}
+			.pjlp{color: #D8D8D8;}
+			.pjfp{color: red;background-color: #E9E9E9;font-weight: bold;}
+
+/*全部咨询*/
+			.ift1{width: 787px;margin-top: 14px;float: left;margin-left: 23px;background-color:#fff;}
+			.gind1{height: 34px;line-height: 34px;overflow: hidden;}
+			.gindl1{float: left;height: 32px;line-height: 32px;width: 130px;color: #076DBB;font-size: 14px;font-weight: bold;text-align: center;border:1px solid #0688BA;border-bottom: none;}
+			.gindr1{float: right;height: 32px;line-height: 32px;font-size: 12px;width: 655px;border-bottom:1px solid #0688BA;}
+			.gindr1 span{margin-left: 582px;color: #075B9B;}
+			.pjxx11{width: 714px;background-color: #F3F3F3;padding: 5px 20px;font-size: 12px;color: #777;margin: 10px auto 28px;line-height: 25px;}
+			.pjsco1{padding: 0 32px 0px 67px;*padding-right: 0;}
+			.pjsco1 p{font-size: 12px;color: #777;line-height: 20px;}
+			.jshu1{overflow: hidden;margin-bottom: 36px;}
+			.jshl1{width: 48px;text-align: center;float: left;}
+			.hybh1{margin-top: 3px;}
+			.jshr1{float: left;margin-left: 34px;}
+			.wfmy1{font-size: 12px;font-weight: bold;margin-bottom: 15px;display: inline-block;}
+			.jshpy{text-indent: 4px;margin-bottom: 7px;}
+			.pjsco1 .tbc1{width: 577px;height: 56px;background-color: #F1F1F1;line-height: 56px;padding-left: 29px;margin-top: 5px;font-size: 12px;position: relative;}
+			.tbc1 span{color: #000;}
+			.tbc1 i{background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页2_c2.jpg) center center no-repeat;width: 9px;height: 5px;position: absolute;left: 29px;top: -5px;}
+			.pjdat1{font-size: 12px;color: #ABABAB;float: right;margin-right: 12px;*margin-right: 23px;*margin-top: -33px;}
+			.pjym1{margin: 0px;font-size: 12px;float: right;margin-right: 32px;padding-bottom: 0;margin-bottom: 20px;*margin-bottom: -20px;}
+    </style>
+</head>
+<body class="grey"> 
+    <!-- 顶部 -->
+    <div class="top comWidth">
+        <div class="topA"></div>
+    </div>
+    <!-- 用户位置 -->
+    <div class="userP comWidth">
+        <a href=""><strong>首页</strong></a>
+        <span>&nbsp;<strong>&gt;</strong>&nbsp;</span>
+        <a href="">平板电脑</a>
+        <span>&nbsp;&gt;&nbsp;</span>
+        <a href="">Apple苹果</a>
+        <span>&nbsp;&gt;&nbsp;</span>
+        <span>MD531/A</span>
+    </div>
+    <!-- 产品展示 -->
+    <div class="gShow comWidth">
+        <div class="gShow1">
+            <div class="left">
+                <div class="imgB">
+                    <a href=""><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/images/4_03.jpg" alt=""></a>
+                </div>
+                <div class="imgS">
+                    <a href="" class="act"><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/images/4_07.jpg" alt="">
+                    </a>
+                    <a href=""><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/images/4_09.jpg" alt="">
+                    </a>
+                    <a href=""><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/images/4_11.jpg" alt="">
+                    </a>
+                    <a href=""><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/images/4_13.jpg" alt="">
+                    </a>
+                    <a href=""><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/images/4_15.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="gru">
+                    <h3 class="gtl">全网底价 Apple 苹果 iPad mini 16G wifi版 平板电脑 前白后银 MD531CH/A 银白两色生产批次不同混合发货</h3>
+                    <div class="xl">
+                        <span class="rlt">幕课价</span>
+                        <span class="money">¥</span><span class="jmon">1999.00</span>
+                    </div> 
+                    <div class="xl">
+                        <span class="rlt">优惠</span>
+                        <a href="" class="mhg"><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/images/images/4_0aa3_03.jpg" alt=""></a> 
+                        <span class="hgt">购ipad加价优惠够配件或USB充电插座</span>
+                    </div> 
+                    <div class="grm">
+                        <div class="xl1">
+                            <span class="rlt1">送到</span>
+                            <div class="addr">
+                                <span class="addr1">北京市 海淀区 五环内</span><span class="jo"></span>
+                                <ul class="addrj">
+                                    <li>北京市 海淀区 五环内</li>
+                                    <li>北京市 海淀区 五环内</li>
+                                    <li>北京市 海淀区 五环内</li>
+                                </ul> 
+                            </div>   
+                            <span class="hgt">有货，可当日出库</span>
+                        </div> 
+                        <div class="xl1">
+                            <span class="rlt1 rlt2">选择颜色</span>
+                            <div class="addr2">
+                                 <li class="act">
+                                    <span>白色</span>
+                                 </li><li>
+                                    <span>黑色</span>
+                                 </li><li>
+                                    <span>灰色</span>
+                                 </li>
+                            </div>   
+                        </div> 
+                        <div class="xl1">
+                            <span class="rlt1 rlt2 rlt3">选择规格</span>
+                            <div class="addr2 addr3">
+                                 <span class="act">WIFI 16G</span><span>WIFI 64G</span><span>WIFI 32G</span><span>WIFI Cellular 32G</span><span>WIFI Cellular 32G</span><span>WIFI Cellular 32G</span>
+                            </div>   
+                        </div> 
+                        <div class="xl1 xl2">
+                            <span class="rlt1 rlt2">数量</span>
+                            <div class="addr2 addr4">                               
+                                 <span class="jian">-</span>
+                                 <input type="text">
+                                 <span class="jia">+</span>                          
+                            </div> 
+                            <div class="xg">限购<span>9</span>件</div>  
+                        </div> 
+                    </div>
+                    <div class="yxz">
+                        <p>已选择 <span>“白色|WIFI 16G”</span></p>
+                        <div class="jgc"><span><i class="ico"></i>加入购物车</span></div>
+                        <div class="jgc jgc1"><span><i class="ico"></i>立即购买</span></div>
+                        <p class="ptp">注意：此商品可提供普通发票，不提供增值税发票。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 左侧小列表 -->
+    <div class="gIft comWidth">
+        <div class="gxqxl">
+            <div class="xlb">
+                <div class="tjw"><h4>同价位</h4></div>
+                <div class="gbj">
+                    <a href="" class="xlt"><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r1_c4.jpg" alt=""></a>
+                    <a href="">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a>
+                    <p class="jg1">¥3588.00</p>
+                </div>
+                <div class="gbj">
+                    <a href="" class="xlt"><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r3_c1.jpg" alt=""></a>
+                    <a href="">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a>
+                    <p class="jg1">¥3588.00</p>
+                </div>
+                <div class="gbj">
+                    <a href="" class="xlt"><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r5_c3.jpg" alt=""></a>
+                    <a href="">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a>
+                    <p class="jg1">¥3588.00</p>
+                </div>
+                <div class="gbj">
+                    <a href="" class="xlt"><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r7_c2.jpg" alt=""></a>
+                    <a href="">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a>
+                    <p class="jg1">¥3588.00</p>
+                </div>
+            </div>
+            <div class="xlb">
+                <div class="tjw tjw1"><h4>看了最终买</h4></div>
+                <div class="gbj">
+                    <a href="" class="xlt"><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r1_c4.jpg" alt=""></a>
+                    <a href="">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a>
+                    <p class="jg1">¥3588.00</p>
+                </div>
+                <div class="gbj">
+                    <a href="" class="xlt"><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r3_c1.jpg" alt=""></a>
+                    <a href="">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a>
+                    <p class="jg1">¥3588.00</p>
+                </div>
+                <div class="gbj">
+                    <a href="" class="xlt"><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r5_c3.jpg" alt=""></a>
+                    <a href="">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a>
+                    <p class="jg1">¥3588.00</p>
+                </div>
+                <div class="gbj">
+                    <a href="" class="xlt"><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_r7_c2.jpg" alt=""></a>
+                    <a href="">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a>
+                    <p class="jg1">¥3588.00</p>
+                </div>
+            </div>
+        </div>
+		<!-- 右側詳情 -->
+        <div class="ift">
+            <div class="gind">
+                <li class="gindl"><span>产品介绍</span></li>
+                <li class="gindr"><span>商品评价（4725）</span></li>
+            </div>
+            <div class="geva">
+                <h4>商品评价</h4>
+                <div class="sco"><span class="scon">4.7</span><span>分</span></div>
+                <div class="scop">
+                    <div class="scop1"><span class="fcb">非常不满意</span><span>不满意</span><span>一般</span><span>满意</span><span>非常满意</span><span class="gedw">4.7</span></div>
+                    <p>共18939位慕课网友参与评分</p>
+                </div>
+            </div>
+            <div class="pjxx">
+            	<div class="pjxx1">
+            		<span class="phA">全部</span><span>满意（17490）</span><span>一般（549）</span><span>不满意（743）</span>
+            	</div>
+            	<div class="pjxx2"><span>时间排序</span><span class="pjxx22">推荐排序<i></i></span></div>
+            </div>
+            <div class="pjsco">
+            	<div class="jshu">
+            		<div class="jshl">
+            			<img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_2.jpg" alt="">
+            			<p class="hybh">61***42</p><p>金色会员</p>
+            		</div>
+            		<div class="jshr">
+            			<ul class="pjwx"><li></li><li></li><li></li><li></li><li></li></ul>
+            			<span class="wfmy">5分 满意</span> 
+            			<p>挺不错的，信赖慕课</p>
+            			<p class="tbc">踩（0） 顶（0）</p>
+            		</div>
+            		<div class="pjdat">2014-03-07 17:41:44</div>
+            	</div>
+            	<div class="jshu">
+            		<div class="jshl">
+            			<img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_2.jpg" alt="">
+            			<p class="hybh">61***42</p><p>金色会员</p>
+            		</div>
+            		<div class="jshr">
+            			<ul class="pjwx"><li></li><li></li><li></li><li></li><li></li></ul> 
+            			<span class="wfmy">5分 满意</span>
+            			<p>挺不错的，信赖慕课</p>
+            			<p class="tbc">踩（0） 顶（0）</p>
+            		</div>
+            		<div class="pjdat">2014-03-07 17:41:44</div>
+            	</div>
+            	<div class="pjym">
+            		<a href="" class="pjlp">< 上一页</a><a href="" class="pjfp">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a><span class="pjlue">...</span><a href="" class="pjzy">1879</a><a href="" class="pjnp">下一页 ></a><span>到第</span><input type="text" class="pjsry"><span>页</span><input type="button" value="确定" class="pjsu">
+            	</div>
+            </div>
+        </div>
+        <div class="ift1">
+            <div class="gind1">
+                <li class="gindl1"><span>全部咨询(705)</span></li>
+                <li class="gindr1"><span>发表咨询</span></li>
+            </div>
+            <div class="pjxx11">
+            	提示:因厂家更改产品包装、产地或者更换随机附件等没有任何提前通知，且每位咨询者购买情况、提问时间等不同，为此以下回复信息仅供参考！若由此给您带来不便请多多谅解，谢谢！
+            </div>
+            <div class="pjsco1">
+            	<div class="jshu1">
+            		<div class="jshl1">
+            			<img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20_r2_c2.jpg" alt="">
+            			<p class="hybh1">12***20</p><p>土星会员</p>
+            		</div>
+            		<div class="jshr1">
+            			<span class="wfmy1">[商品咨询]</span> 
+            			<div class="pjdat1">2014-04-08 11:23:14</div>
+            			<p class="jshpy">还能在便宜点么？</p>
+            			<p class="tbc1"><i></i><span>慕课网回复</span>：您好，现在已经是活动价格了</p>
+            		</div>    		
+            	</div>
+            	<div class="jshu1">
+            		<div class="jshl1">
+            			<img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20_r2_c2.jpg" alt="">
+            			<p class="hybh1">12***20</p><p>土星会员</p>
+            		</div>
+            		<div class="jshr1">
+            			<span class="wfmy1">[商品咨询]</span> 
+            			<div class="pjdat1">2014-04-08 11:23:14</div>
+            			<p class="jshpy">还能在便宜点么？</p>
+            			<p class="tbc1"><i></i><span>慕课网回复</span>：您好，现在已经是活动价格了</p>
+            		</div>    		
+            	</div>
+            	
+            	<div class="pjym pjym1">
+            		<a href="" class="pjlp">< 上一页</a><a href="" class="pjfp">1</a><a href="">2</a></a><span>到第</span><input type="text" class="pjsry"><span>页</span><input type="button" value="确定" class="pjsu">
+            	</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
