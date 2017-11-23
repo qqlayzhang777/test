@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车和结算页</title>
+    <style type="text/css">
+        *,div,li,i,ul,p,span,input,label,h2,h3,h4,h5,dd,dl,dt,ol,a{padding: 0;margin: 0;}
+        li{list-style: none;}
+        a{text-decoration: none;color: #000;}
+        input,img{border:none;outline: none;}
+        .cf{overflow: hidden;}
+        .fl{float: left;}
+        .fr{float: right;}
+        .comWidth{width: 1000px;margin: 0 auto;}
+    /*顶部*/
+        .top1{height: 32px;background-color:#F7F7F7;font-size: 12px;line-height: 32px;}
+        .shouc{font-weight: bold;background: url(file:///C:/Users/Administrator/Desktop/jpg/shoucang.jpg) left center no-repeat;padding-left: 18px;}
+        .top1 a:hover{color: red;}
+        /*.shouc{font-weight: bold;}
+        .shouc span{float: left;}
+        .shouc .shouci{background: url(file:///C:/Users/Administrator/Desktop/jpg/shoucang.jpg) left center no-repeat;width: 15px;height: 14px;display: inline-block;margin-top: 9px;margin-right: 5px;}*/
+
+        .t1r{margin-right: 22px;}
+        .t1r span,.t1r a{color: #656565;}
+        .top2{height: 85px;background-color: #1D7AD9;}
+
+        .mklogo{width: 112px;height: 59px;display: inline-block;margin-left: 30px;margin-top: 15px;}
+
+        .shopor{margin-right: 53px;*margin-right:31px;}
+        .myct{margin-top: 25px;margin-left: -5px;position: relative;}
+        .mcxh{width: 168px;background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/6.购物车和结算页_r2_c2.jpg) left center no-repeat;font-size: 12px;font-family: "微软雅黑";font-weight: bold;padding:1px 0 1px 5px;color: #1D7AD9;}
+        .myct1{margin-top: 8px;font-family: "微软雅黑";font-weight: bold;color: #F3E402;margin-left: -30px;position: absolute;}
+        .myct2{margin-top: 8px;font-family: "微软雅黑";font-weight: bold;color: #F3E402;margin-left: -35px;position: absolute;}
+        .mcxh1{width: 55px;height: 19px;background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/6.购物车和dd结算页_r2_c2.jpg) left center no-repeat;font-size: 12px;font-family: "微软雅黑";font-weight: bold;padding:1px 0 1px 6px;color: #1D7AD9;line-height: 19px;}
+        .myct3{margin-top: 10px;color: #fff;margin-left: -35px;position: absolute;}
+   
+    /*收货信息*/
+        .shxx{margin-top: 12px;}
+        .shx1{border:1px solid #ccc;margin-bottom: 20px;}
+        .shxt{height: 31px;background-color: #F2F2F2;line-height: 31px;border-bottom: 1px solid #CCC;text-indent: 10px;font-family: "微软雅黑";font-size: 14px;}
+        .shjt{padding-left: 30px;padding-top: 25px;font-size: 12px;}
+        .shjx{color:red;margin-right: 9px;}
+        .shjt1{height: 24px;line-height: 24px;margin-bottom: 13px;}
+        .shjx1{width: 142px;height: 18px;border:1px solid #CCC;display: inline-block;line-height: 18px;padding-left: 10px;position: relative;*padding-top: 2px;}
+        .shjxi{width: 8px;height: 4px;background:url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/6.购物车和结算22页_r2_c2.jpg) center center no-repeat;display: inline-block;position: absolute;right: 9px;top:8px;*top: 3px;}
+        .xxdz{width: 370px;height: 22px;line-height: 22px\9;border:1px solid #CCC;display: inline-block;padding: 0 10px;color: #888;}
+        .xxdz1{width: 110px;margin-right: 9px;}
+        .xxdz2,.xxdz3,.xxdz4{border:1px solid #ABADB3;padding: 0 2px;line-height: 22px\9;display: inline-block;height: 22px;}
+        .xxdz2{width: 58px;}
+        .xxdz3,.xxdz4{width: 97px;}
+        .dug{font-weight: bold;margin:0 3px;position: relative;top: -5px;}
+        .shjq{width: 112px;height: 26px;line-height: 26px;background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_dddr1_c4.jpg) center center no-repeat;text-align: center;color: #fff;margin-top: 7px;border:1px solid #3784ED;margin-bottom: 15px;}
+        .xdfi{position: relative;*top: -5px;}
+        .xdfi span{*width: 12px;*display: inline-block;}
+        .hgdd{position: relative;*top: -5px;}
+
+        .wxzf1{height: 22px;line-height: 22px;margin-left: 30px;margin-top: 15px;position: relative;margin-bottom: 15px;padding-bottom: 6px;font-size: 12px;}
+        .wxzf1 input{margin-right: 8px;font-size: 12px;position: absolute;top: 5px;*top: 0px;}
+        .wxzf1 label{margin-right: 19px;font-size: 12px;margin-left: 20px;}
+        .wxzf1 i{background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/6.购物车和wx结算页_r2_c2.jpg) center center no-repeat;width: 26px;height: 20px;display: inline-block;position: absolute;top: 1px;}
+        .wxzf1 span{margin-left: 33px;}
+        .wxzf1 .xjsk{margin-left:0px;}
+        
+
+        .shjt_1{padding-left: 30px;padding-top: ;font-size: 12px;}
+        .shjx_1{color:red;margin-right: 9px;}
+        .shjt1_1{height: 24px;line-height: 24px;margin-bottom: 13px;}
+        .shjx1_1{width: 99px;height: 17px;border:1px solid #CCC;display: inline-block;line-height: 17px;padding-left: 10px;position: relative;*padding-top: 2px;}
+        .shjxi_1{width: 17px;height: 17px;background:url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/6.购物车和结ddd算页_r2_c2.jpg) center center no-repeat;display: inline-block;position: absolute;right: 0px;top:0px;*top: 1px;*right: -1px;}
+        .shjq_1{width: 64px;height: 22px;line-height: 22px;background: url(file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/4.详细页%20-%20商品评价_dddr1_c4.jpg) center center no-repeat;text-align: center;color: #fff;margin-top: 7px;border:1px solid #3784ED;margin-bottom: 15px;display: inline-block;margin-right: 10px;}
+        .shjt_1 .shjq_2{border:1px solid #ccc;background: #F5F5F5;color: #000;}
+        /*.shjq_2{width: 64px;height: 22px;line-height: 22px;background-color: #F5F5F5;text-align: center;margin-top: 7px;border:1px solid #ccc;margin-bottom: 15px;display: inline-block;margin-right: 10px;}*/
+
+        .wxzf2{height: 28px;line-height: 28px;padding-left: 30px;margin-left: 0;margin-top: 6px;font-size: 12px;border-bottom: 1px solid #E6E6E6;padding-bottom: 0;margin-bottom: 9px;}
+        .wxzf2 li{float: left;}
+        .shxta{color: #3377FF;margin-right: 34px;font-size: 12px;}
+        .wxzf_1{margin-right: 393px;}
+        .wxzf_2,.wxzf_3,.wxzf_4{margin-right: 112px;}
+
+        .wxz_sx{border-bottom: 1px solid #ccc;padding-bottom: 8px;float: left;width: 100%;}
+        .wxz_si{margin-left: 57px;float: left;margin-right: 37px;}
+        .wxz_st li{float: left;font-size: 12px;font-family: "微软雅黑";}
+        .wxz_s1{margin-right: 75px;}
+        .wxz_s2{margin-right: 79px;}
+        .wxz_s3{margin-right: 110px;}
+        .wxz_s4{margin-right: 119px;}
+        .wxz_s5{color: red;font-weight: bold;}
+        .wxz_s6{margin-top: 40px;margin-right: 406px;}
+        .wxz_s7{margin-top: 40px;}
+        
+        .qly{color: #3377FF;height: 40px;width: 900px;margin: 0 30px;line-height: 40px\9;margin-bottom: 22px;border:0; }
+    </style> 
+</head>
+<body>
+    <div class="top">
+        <div class="top1 cf">
+            <div class="comWidth cf">
+                <a href="" class="shouc fl"><!-- <span class="shouci"></span> -->收藏慕课</a>
+                <div class="t1r fr">
+                    <span>欢迎来到慕课网！</span>
+                    <a href="">[登录]</a><a href="">[免费注册]</a>
+                </div>
+            </div>
+        </div>
+        <div class="top2 cf">
+            <div class="comWidth cf">
+                <a href="" class="mklogo fl"><img src="file:///C:/Users/Administrator/Desktop/jpg/logo.jpg" alt=""></a>
+                <div class="shopor fr">
+                    <div class="myct fl">
+                        <div class="mcxh">1</div>
+                        <div class="myct1">我的购物车</div>
+                    </div>
+                    <div class="myct fl">
+                        <div class="mcxh">2</div>
+                        <div class="myct2">填写核对订单</div>
+                    </div>
+                    <div class="myct fl">
+                        <div class="mcxh1">3</div>
+                        <div class="myct3">订单提交成功</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shxx comWidth">
+            <div class="shx1">
+                <div class="shxt">收货信息</div>
+                <div class="shjt">
+                    <div class="shjt1">
+                        <span class="shjx">*</span><span>选择地区：</span><span class="shjx1">北京市 海淀区 五环内<span class="shjxi"></span></span>
+                    </div>
+                    <div class="shjt1">
+                        <span class="shjx">*</span><span class="xdfi">详细地址：</span><input type="text" value="最多输入26个汉字" class="xxdz">
+                    </div>    
+                    <div class="shjt1">
+                        <span class="shjx">*</span><span class="xdfi">收 货 人：</span><input type="text" value="最多10个汉字" class="xxdz xxdz1">
+                    </div>
+                    <div class="shjt1">
+                        <span class="shjx">*</span><span class="xdfi">手&nbsp;&nbsp;&nbsp;&nbsp;<span></span>机：</span><input type="text" value="如13452525625" class="xxdz xxdz1"><span class="hgdd">或固定电话：</span><input type="text" value="区号" class="xxdz2"><span class="dug">_</span><input type="text" value="电话号码" class="xxdz3"><span class="dug">_</span><input type="text" value="分机号（可选）" class="xxdz4">
+                    </div> 
+                    <div class="shjq">确认收货地址</div>                
+                </div>
+            </div>
+            <div class="shx1">
+                <div class="shxt">支付方式</div>
+                <div class="wxzf">                
+                    <div class="wxzf1">
+                        <input type="radio" id="r1"><label for="r1">微信支付</label><i></i><span>用微信扫一扫就能支付！</span>
+                    </div>
+                    <div class="wxzf1">
+                        <input type="radio" id="r2"><label for="r2">货到付款</label><span class="xjsk">送货上门后再付款，使用现金或刷银行卡。</span>
+                    </div>
+                </div>
+            </div>
+            <div class="shx1">
+                <div class="shxt">发票信息</div>
+                <div class="wxzf">                
+                    <div class="wxzf1">
+                        <input type="checkbox" id="check" class="xyf"><label for="check">需要发票</label>
+                    </div>
+                    <div class="shjt_1">
+                        <div class="shjt1_1">
+                            <span class="shjx_1">*</span><span>选择地区：</span><span class="shjx1_1">商业零售发票<span class="shjxi_1"></span></span>
+                        </div>                       
+                        <span class="shjq_1">保存</span><span class="shjq_1 shjq_2">取消</span>                
+                    </div>
+                </div>
+            </div>
+            <div class="shx1 shx11">
+                <div class="shxt cf"><span class="shxts fl">送货清单</span><a href="" class="shxta fr">返回购物车修改</a></div>           
+                <div class="wxzf">                
+                    <div class="wxzf1 wxzf2 cf">
+                        <li class="wxzf_1">商品名称</li>
+                        <li class="wxzf_2">单价</li>
+                        <li class="wxzf_3">返现</li>
+                        <li class="wxzf_4">数量</li>
+                        <li class="wxzf_5">小计</li>
+                    </div>
+                    <div class="wxz_sx cf">
+                        <a href="" class="wxz_si"><img src="file:///C:/Users/Administrator/Desktop/jpg/新建文件夹/6.购物车和结as算页_r2_c2.jpg" alt=""></a>
+                        <div class="wxz_st cf">
+                            <li class="wxz_s1">
+                                <a href="">Hisense 海信 BCD-202D 202升 三门冰箱（银色）</a>
+                            </li>
+                            <li class="wxz_s2">￥1459.00</li>
+                            <li class="wxz_s3">￥0.00</li>
+                            <li class="wxz_s4">1</li>
+                            <li class="wxz_s5">￥1459.00</li>
+                            <li class="wxz_s6">[赠品] 保鲜盒 抽真空保鲜盒-海信水洗赠品</li>
+                            <li class="wxz_s7">1</li>
+                        </div>
+                    </div>    
+                    <input type="text" value="若您对包裹有特殊要求，请在此留言" class="qly">       
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
