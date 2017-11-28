@@ -1,0 +1,472 @@
+*,p,li,body,div,input,ul,span,a,h2{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    font-style: none;
+    border-style: none;
+    text-decoration: none;
+}
+.fl{float: left;}
+.fr{float: right;}
+.cf{overflow: hidden;}
+.comWidth{
+    width: 1000px;
+    margin: 0 auto;
+}
+a:hover{
+    color: red;
+}
+/*顶部样式*/
+.top1{
+    font-size: 12px;
+    height: 31px;
+    border-bottom: 1px solid #EEEEEE;
+    background-color: #fff;
+}   
+    .t1l{
+        line-height: 31px;
+        color: #656565;
+        background: url(file:///F:/mcoui/qqyy/yuan/ds2/jpg/shoucang.jpg) left center no-repeat;
+        padding-left: 18px;
+        float: left;
+        font-weight: bold;
+    } 
+    .t1r{
+        color: #656565;
+        line-height: 31px;
+        float: right;
+        margin-right: 21px;
+    }
+    .t1r a:hover{
+        color: red;
+    }
+    .t1r a{
+        color: #656565;
+    }
+.top2{
+    height: 85px;
+    background-color: #1D7AD9;
+}
+    .t21{
+        margin:12px 39px 10px;
+    }
+    .t22{
+        height: 35px;
+        width: 430px;
+        margin-top: 23px;
+        margin-left: 146px;
+    }
+    .t22 input{
+        display: block;
+        float: left;
+        height: 35px;
+    }
+        .t22 .search{
+            width: 350px;
+            padding: 0 5px;
+            line-height: 35px\9;
+            font-size: 14px;
+        }
+        .t22 .search_b{
+            width: 70px;
+            background-color: #ff8b00;
+            color: #fff;
+            font-size: 14px;
+            line-height: 35px;
+            text-align: center;
+        }
+    .t23{
+        width: 145px;
+        height: 35px;
+        margin-top: 23px;
+        margin-left: 31px;
+        background-color: #ff8b00;
+    }
+        .t23 .sp_l{
+            width: 87px;
+            height: 35px;
+            border-right: 1px solid #e27a00;
+        }
+        .t23 .sp_r{
+            width: 56px;
+            height: 35px;
+            border-left: 1px solid #ff9c01;
+        }
+        .t23 a{
+            color: #fff;
+            line-height: 35px;
+            background: url(file:///F:/mcoui/qqyy/yuan/ds2/jpg/shopcar.jpg) left center no-repeat;
+            padding-left:29px;
+            margin-left: 11px;
+        }
+        .t23 span{
+            display: block;
+            color: #fff;
+            line-height: 35px;
+            margin-left: 19px;
+            background: url(file:///F:/mcoui/qqyy/yuan/ds2/jpg/num.jpg) 14px center no-repeat;
+        }
+        .t23 a:hover{
+        color: red;
+        }
+.top3{
+    height: 35px;
+    background-color: #1369C0;
+    line-height: 35px;
+    color: #fff;
+}
+    .top3 li,h2{
+        float: left;
+        display: block;
+     }
+     .top3 h2{
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 39px;
+
+     }
+        .top3 .zhan{
+            display: inline-block;
+            width: 11px;
+            height: 7px;
+            float: right;
+            margin:14px 30px 0 13px;
+            background: url(file:///F:/mcoui/qqyy/yuan/ds2/jpg/nav.jpg) left center no-repeat;
+        }
+        .top3 ul li{
+            width: 100px;
+            height: 35px;
+            text-align: center;
+            background: #1369c0;
+            font-size: 15px;
+        }
+        .top3 .shuma{
+            background-color: #4594fd;
+        }
+/*列表*/
+.cla{
+    width: 189px;
+    height: 324px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #3587f3;
+    background-color: #4594fd;
+    color: #fff;
+    float: left;
+    position: relative;
+}
+    .lie1{
+        height: 63px;
+        width: 189px;
+        border-bottom: 1px solid #3487F2;
+        border-top: 1px solid #5AA1FE;
+    }
+    .lieb{
+        height: 63px;
+        width: 189px;
+        border-bottom: 1px solid #3487F2;
+        border-top: none;
+    }
+        .lie11{
+            margin-left: 11px; 
+        }
+        .lie11 span{
+            display: inline-block;
+            margin-top:10px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        .lie11 a:hover{color: red;}
+        .lie11 a{
+            font-size: 12px;
+            text-decoration: underline;
+            background: url(file:///F:/mcoui/qqyy/yuan/ds2/jpg/hy.png) left center no-repeat; 
+            display: inline-block;
+            width: 48px;
+            height: 20px;           
+            color: #fff;
+            text-align: center;
+            margin-left: 5px;
+            text-decoration: none;
+            padding-top: 2px;
+        }
+        .lieb .lie11 a{
+            text-decoration: underline;
+            padding-top: 0px;
+        }
+        .lie11 p{
+
+            color: #C1D8F7;
+            font-size: 12px;
+        }
+        .lie11 li{
+            display: inline-block;
+            width: 5px;
+            height: 8px;
+            float: right;
+            margin-top:19px;
+            margin-right: 13px;
+            background: url(file:///F:/mcoui/qqyy/yuan/ds2/jpg/jiao2.jpg) right center no-repeat;
+        }
+        .lie2{
+            background-color: #fff;
+            color: #000;
+        }
+        .lie2 .lie11 p{
+            text-decoration: none;
+            color: #000;
+        }
+        .lie2 .lie11 li{
+            display: none;
+        }
+
+
+/*分类*/
+        .com0{
+            margin: 8.7px 0;
+        }
+        .comH a{
+            line-height: 24px;
+            font-size:12px;
+            color: #656565;
+            margin-right: 13px;
+        }
+        .comI p{
+            color: #4B87D9;
+            font-weight: bold;
+            margin-right: 20px;
+            line-height: 24px;
+        }
+
+.com{
+    width: 569px;
+    height: 379px;
+    border-top: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    float: left;
+position: absolute;
+margin-left: 190px;
+
+}
+    .comC{
+        width: 530px;
+        height: 324px;
+        margin:0 auto;
+    }
+    .comI{
+        width: 530px;
+        border-bottom: 1px solid #DDD;
+
+    }
+    .channel{
+        width: 569px;
+        height: 54px;
+        border-bottom: 1px solid #DDD;
+        border-left: 1px solid #ddd;
+    }
+    .cne1 a{
+        display: inline-block;
+        /*width: 96px;*/
+        height: 26px;
+        background-color: #2785E6;
+        color: #fff;
+        font-family: "宋体";
+        font-size: 12px;
+        line-height: 26px;
+        margin-top: 15px;
+        margin-right: 10px;
+        padding:0 18px 0 9px;
+        /*background:url(file:///F:/mcoui/qqyy/yuan/ds2/jpg/jiao3.jpg) left center no-repeat;*/
+    }
+    .cne1 a:hover,.comH a:hover{
+        color:red;
+    }
+    .comH .comHL{
+        color:#FF7300; 
+    }
+    .cne1 a span{
+        display: inline-block;
+        width: 5px;
+        height: 8px;
+        background:url(file:///F:/mcoui/qqyy/yuan/ds2/jpg/jiao3.jpg) left center no-repeat;
+        margin-left:8px;
+    }
+    .cne{
+        margin-left: 19px;
+    }
+
+/*banner部分*/  
+.ban{
+      width: 810px;
+    height: 325px;
+    position: relative;
+    overflow: hidden;
+    }
+    .banB{
+        width: 1620px;
+        height: 325px;
+        position: absolute; left: 0;top: 0;
+    }
+    .ban .banB img{
+        display: block;
+        float: left;
+        width: 810px;
+        height: 325px;
+    }
+
+    .banner .num{
+        position: absolute;left: 0;bottom: 15px;width: 100%;
+        text-align: center;
+    }
+    .num a{
+        display: inline-block;
+        width: 20px;
+        height: 5px;
+        background-color: #fff;
+        margin-right: 5px;
+    }
+    .num .lig{
+        background-color: #FF7700;
+    }
+
+/*产品类目*/
+.homeT{
+    height: 75px;
+}
+    .homeT  p{
+        line-height: 75px;
+        font-size: 24px;
+        float: left;
+        background: url(file:///F:/mcoui/qqyy/yuan/ds2/jpg/jdn.jpg) left center no-repeat;
+        padding-left: 58px;
+    }
+    .homeT a{
+        float: right;
+        margin-right: 23px;
+        font-family: "宋体";
+        font-size: 12px;
+        color: #000;
+        margin-top: 48px;
+    }
+    .homeT a:hover{
+        text-decoration: underline;
+    }
+/*小banner*/
+    .banS{
+        width: 190px;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+    }
+        .banBS{
+            width: 380px;
+            height: 400px;
+        }
+        .banBS a{
+            display: inline-block;
+            height: 400px;
+            width: 190px;
+            float: left;
+        }
+        .banS .numS{
+            position: absolute;left: 0;bottom: 15px;width: 100%;
+            margin-left: 20px;
+        }
+        .numS a{
+            display: inline-block;
+            width: 20px;
+            height: 5px;
+            background-color: #fff;
+            margin-right: 5px;
+        }
+        .numS .ligS{
+            background-color: #FF7700;
+        }
+
+    .goods{
+        width: 810px;
+        height: 397px;
+        border-bottom: 3px solid #FF7700;
+    }
+        .goa{
+            width: 201.5px;
+            border-right: 1px solid #DDD;
+            border-top: 1px solid #DDD;
+            border-bottom: 1px solid #DDD;
+            height: 280px;
+            text-align: center;
+        }
+        .goa a{
+            display: block;
+            line-height: 25px;
+            font-size: 16px;
+            text-decoration: bold;
+            color: #000;
+            margin-top: 20px;
+        }
+        .goa a:hover{
+            color: red;
+        }
+        .goa img{
+            margin-top: 45px;
+        }
+        .goa p{
+            line-height: 21px;
+            color: #FF7700;
+        }
+
+        .gob{
+            width: 201.5px;
+            border-right: 1px solid #DDD;
+            height: 116px;  
+        }
+            .gob .gfa{
+                float: left;
+                width: 100px;
+                height: 116px;
+                display: inline-block;
+                text-align: center;
+            }
+            .gob img{
+                display: inline-block;
+                margin: 25px auto;
+            }   
+            .gdt{
+                float: left;
+                width: 100px;
+                height: 116px;
+            }
+            .gdt a{
+                margin: 32px 5px 0px 0px;
+                display: inline-block;
+                color: #000;
+                font-family: "新宋体";
+                line-height: 18px;
+            }
+            .gdt a:hover{
+                color: #FF7700;
+            }
+            .gdt p{
+                float: left;
+                margin:5px 2px 0 -2px;
+                background:url(file:///F:/mcoui/qqyy/yuan/ds2/jpg/qian.jpg) left center no-repeat;
+                width: 12px;
+                height: 12px;
+            }
+            .gdt span{
+                font-size: 16px;        
+            }
+
+/*底部*/
+.foot{text-align: center;line-height: 24px;padding: 49px 0;background-color: #D4D4D4;margin-top: 40px;}
+    .foot a{color: #000;}
+    .foot a:hover{color: #FF7700;}
+    .foot span{margin: 0 3px;}
+    .foot .web{margin-top: 31px;}
+    .web a{margin: 0 12px;}
+
+
+
+
+
