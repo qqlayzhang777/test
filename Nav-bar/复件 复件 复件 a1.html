@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *,ul,span,div,li,a{padding: 0;margin: 0;}
+        ul,li{list-style: none;}
+        a{
+            text-decoration: none;
+            display: block;
+            padding: 0px 3px;
+            color:#fff;
+        }
+        .nav{
+            /*width: 100%;*/
+            /*height: 200px;*/
+            text-align: center;
+            border:1px solid red;
+            overflow: hidden;
+        }
+        .nav li{
+            float: left;
+            background-color: #666;
+            text-align: center;
+            margin: 3px;
+            width: 140px;
+            color:#fff;
+            font-size:14px;
+        }
+        .nav_0{
+            display: none;
+            width: 600px;
+            /*height: 50px;*/
+            font-size:40px;
+            text-align: center;
+            /*margin: 0 auto;*/
+        }
+        .nav_0 a{
+            color:#000;
+        }
+        .nav_0 span{
+            display: none;
+        }
+        li.nav_1{
+            width: 230px;
+            background-color:#fff;
+        }
+        .nav_1 a{
+            font-size: 45px;
+            color:#666;
+        }
+        @media only screen and (min-width:831px) and (max-width:3000px)
+        {
+            .nav li{
+                display: block;
+            }
+        }
+        @media only screen and (min-width:600px) and (max-width:830px){
+            .nav li{display: block;}
+            li.nav_1{
+                display: none;
+            }
+            .nav_0{
+                display: block;
+                /*width: 100%;*/
+            }
+        }
+        @media only screen and (max-width:600px)
+        {
+            .nav_0{
+                display: block;
+            }
+            .nav_0 span{
+                display: block;
+                float: right;
+            }
+            .nav li{
+                width: 100%;
+                display: none;
+            }
+            li.nav_1{
+                display: none;
+            }
+        }
+    </style>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".nav_0 span").on("click",function(){
+                if($(this).hasClass("active")){
+                    $(this).removeClass("active")
+                    $(".nav li").css("display","none")
+                    return false
+                }else{
+                    $(".nav li").css("display","block")
+                    $(this).addClass("active")
+                    $(".nav_1").css("display","none")
+                    return false
+                }
+                return false
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul class="nav">
+        <div class="nav_0">
+            <a href="">慕课网</a>
+            <span>123</span>
+        </div>
+        <li>
+            <a href="">课程大厅</a><br />
+            IT课程都在这里啦！
+        </li>
+        <li>
+            <a href="">学习中心</a><br />
+            好好学习，天天向上！
+        </li>
+        <li class="nav_1">
+            <a href="">慕课网</a><br />
+        </li>
+        <li>
+            <a href="">个人中心</a><br />
+            个人中心 修改密码
+        </li>
+        <li>
+            <a href="">关于我们</a><br />
+            单位地址 应聘信息
+        </li>
+    </ul>
+</body>
+</html>

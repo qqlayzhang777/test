@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *,ul,li,a{padding: 0;margin: 0;}  
+        ul,li{list-style: none;}  
+        a{text-decoration:none;}
+        .u1{
+            margin: 30px auto;
+            width: 700px;
+            /*border:1px solid red;*/
+            /*overflow: hidden;*/
+        }
+        .u1>li{
+            float: left;
+            text-align: center;
+            /*height: 30px;*/
+            line-height:30px;
+            font-size: 16px;
+            
+            border-right:1px solid #999;
+            width: 120px;
+            
+        }
+        .u1>li span{
+            width: 0px;
+            height: 0px;
+            display: block;
+            margin: 0 30px;
+            border-bottom: 5px solid #000;
+            border-top: 0px solid red;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
+        }
+        .u1>li ul{
+            display:none;
+            overflow: hidden;
+            /*float: left;*/
+            /*width: 280px;*/
+            position: absolute;
+        }
+        .u1>li ul li{
+            text-align: center;
+            height: 30px;
+            line-height:30px;
+            font-size: 16px;
+            background:#333;
+            border-right:1px solid #999;
+            width: 120px;
+            float: left;
+        }
+        .u1 li a{
+            color:#fff;
+            display: block;
+            padding: 0 5px;
+            background:#333;
+            height: 30px;
+        }
+        .u1>li:hover >a{
+            background-color: #ff7800;
+            margin-top:-5px;
+            padding:5px 5px;
+            /*position: relative;*/
+            font-weight: bold;
+            padding-top: 3px;
+        }
+        .u1>li:hover ul{
+            display: block;
+        }
+        .u1>li:hover a{
+            height:auto;
+        }
+        .u1>li ul:hover span{
+            border-bottom: 5px solid #d2ff00;
+        }
+        .u1>li ul li:hover a{
+            background-color: #d2ff00;
+            font-weight: bold;
+            color:#000;
+        }
+    </style>
+    <script type="text/javascript">
+        
+    </script>
+</head>
+<body>
+    <ul class="u1">
+        <li><a href="#">首页</a></li>
+        <li>
+            <a href="#">课程大厅程大厅程大厅</a>
+            <ul>
+                <span></span>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">jQuery</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">学习中心学习中心学习中心学习中心学习中心</a>
+            <ul>
+                <span></span>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">jQuery</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">经典案例</a>
+            <ul>
+                <span></span>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">jQuery</a></li>
+            </ul>
+        </li>
+        <li><a href="#">关于我们</a></li>
+    </ul>
+</body>
+</html>
